@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularz</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <h1>Mój formularz</h1>
+      <form method="POST" action="http://dev.cotenfrontend.pl" class="form">
+        <p>
+          <label for="name">Twoje imię:</label>
+          <input
+            class="form__item"
+            type="text"
+            placeholder="Wpisz swoje imię"
+            id="name"
+            name="name"
+          />
+        </p>
+        <p>
+          <label
+            >Hasło:
+            <input
+            pattern="[a-zA-Z0-9]+"
+              required
+              class="form__item"
+              type="password"
+              id="password"
+              name="password"
+            />
+          </label>
+        </p>
+        <p>
+          <label
+            >Telefon:
+            <input
+              class="form__item"
+              type="tel"
+              id="phoneNumber"
+              name="phoneNUmber"
+            />
+          </label>
+        </p>
+        <p>
+          <label
+            >E-mail:
+            <input class="form__item" type="email" id="email" name="email" />
+          </label>
+        </p>
+        <fieldset>
+          <legend>Płeć</legend>
+          <p>
+            <label>
+              <input type="radio" name="sex" value="man" />
+              Mężczyzna
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="sex" value="woman" /> Kobieta
+            </label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Adres</legend>
+          <p>
+            <label
+              >Ulica:
+              <input class="form__item" type="text" id="street" name="street" />
+            </label>
+          </p>
+          <p>
+            <label
+              >Numer:
+              <input
+                class="form__item"
+                type="number"
+                id="houseNumber"
+                name="houseNumber"
+              />
+            </label>
+          </p>
+          <p>
+            <label
+              >Miasto:
+              <input class="form__item" type="text" id="city" name="city" />
+            </label>
+          </p>
+        </fieldset>
+        <p>
+          <label>
+            Zdjęcie:
+            <input class="form__item" id="avatar" name="avatar" type="file" />
+          </label>
+        </p>
+        <p>
+          <label for="gift"> Wybierz prezent: </label>
+          <select class="form__item" name="gift" id="gift">
+            <option value="gift-1">Lizak</option>
+            <option value="gift-2">Samochód</option>
+            <option value="gift-3">Perkusja</option>
+          </select>
+        </p>
+        <p>
+          <label
+            >Zadowolenie z formularza
+            <input
+              class="form__item range--js"
+              name="satisfaction"
+              id="satisfaction"
+              type="range"
+              min="0"
+              max="5"
+              step="1"
+              value="0"
+            />
+          </label>
+        </p>
+        <p>
+          <label for="comment">Komentarz:</label>
+          <textarea class="form__item" id="comment" name="comment">
+Podoba mi się...</textarea
+          >
+        </p>
+        <p>
+          <label>
+            <input name="agreement" type="checkbox" value="agree" />
+            Zapoznałem się z regulaminem
+          </label>
+        </p>
+        <p>
+          <input name="submit" type="submit" value="Wyślij" />
+        </p>
+      </form>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

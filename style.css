@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: rgb(71, 10, 71);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form {
+    width: 400px;
+}
+
+.form__item {
+  display: block;
+  width: 100%;
+}
+
+.form textarea {
+    width: 100%;
+    min-height: 200px;
+}
